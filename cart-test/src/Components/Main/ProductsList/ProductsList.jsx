@@ -9,6 +9,8 @@ const ProductsList = () => {
     const [products, setProducts] = useContext(CartContext);
 
     const handlePostButton = async () => {
+        alert("There is no Post Request!");
+
         const newProduct = { id: products.length + 1 };
         const { data: product } = await axios.post(apiURL, newProduct);
         const allProducts = [products, ...product];
