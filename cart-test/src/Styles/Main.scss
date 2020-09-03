@@ -1,9 +1,5 @@
-body{
-    margin: 0;
-    padding: 0;
-}
-
-@import "./Navbar/_Navbar.scss";
-@import "./Products/Products.scss";
-@import "./AddProduct/AddProduct.scss";
-@import "./_NotFound.scss";
+@import "./Main/Reset/_Reset.scss";
+@import "./Main/Navbar/_Navbar.scss";
+@import "./Main/Products/_Products.scss";
+@import "./Main/AddProduct/_AddProduct.scss";
+@import "./Main/NotFound/_NotFound.scss";

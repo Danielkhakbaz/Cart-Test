@@ -33,7 +33,7 @@ const NewProduct = (props) => {
                     onChange={(e) => handleChange(e.currentTarget.value)}
                 />
             </div>
-            <button className="btn btn-primary" onClick={handleAddProduct}>
+            <button className="btn btn-primary my-2" onClick={handleAddProduct}>
                 Submit
             </button>
         </>
