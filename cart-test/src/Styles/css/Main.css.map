@@ -1,9 +1,10 @@
 {
     "version": 3,
-    "mappings": "AAAA,AAAA,IAAI,CAAA;EACA,MAAM,EAAE,CAAC;EACT,OAAO,EAAE,CAAC;CACb;;ACHD,AAAA,OAAO,CAAC;EACJ,aAAa,EAAE,IAAI;CACtB",
+    "mappings": "AAAA,AAAA,IAAI,CAAA;EACA,MAAM,EAAE,CAAC;EACT,OAAO,EAAE,CAAC;CACb;;ACHD,AAAA,OAAO,CAAC;EACJ,aAAa,EAAE,IAAI;CACtB;;ACFD,AAAA,SAAS,CAAC;EACN,OAAO,EAAE,IAAI;EACb,qBAAqB,EAAE,cAAc;EACrC,QAAQ,EAAE,IAAI;EACd,aAAa,EAAE,MAAM;EACrB,aAAa,EAAE,IAAI;CACtB;;AACD,AAAA,eAAe,CAAC;EACZ,KAAK,EAAE,IAAI;EACX,MAAM,EAAE,IAAI;EACZ,MAAM,EAAE,eAAe;CAC1B;;AACD,MAAM,CAAC,MAAM,MAAM,SAAS,EAAE,MAAM;EAChC,AAAA,eAAe,CAAC;IACZ,qBAAqB,EAAE,cAAc;GACxC",
     "sources": [
         "../Main.scss",
-        "../Navbar/_Navbar.scss"
+        "../Navbar/_Navbar.scss",
+        "../Products/Products.scss"
     ],
     "names": [],
     "file": "Main.css"
