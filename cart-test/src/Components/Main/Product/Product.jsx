@@ -4,6 +4,7 @@ import MinusButton from "../../Common/MinusButton/MinusButton";
 import Count from "../../Common/Count/Count";
 import PlusButton from "../../Common/PlusButton/PlusButton";
 import DeleteButton from "../../Common/DeleteButton/DeleteButton";
+import PropTypes from "prop-types";
 
 const Product = ({
     product,
@@ -30,6 +31,13 @@ const Product = ({
             </div>
         </>
     );
+};
+
+Product.propTypes = {
+    product: PropTypes.object.isRequired,
+    handleDecreament: PropTypes.func.isRequired,
+    handleIncreament: PropTypes.func.isRequired,
+    handleDelete: PropTypes.func.isRequired,
 };
 
 export default Product;

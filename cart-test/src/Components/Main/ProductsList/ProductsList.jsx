@@ -1,10 +1,19 @@
 import React, { useContext } from "react";
+import PostButton from "../../Common/PostButton/PostButton";
 import Product from "../Product/Product";
 import { CartContext } from "../../../Providers/CartContext";
+import { apiURL } from "../../../Services/API/Config.json";
+import { axios } from "axios";
 
 const ProductsList = () => {
     const [products, setProducts] = useContext(CartContext);
 
+    const handlePostButton = async () => {
+        const newProduct = { id: products.length + 1 };
+        const { data: product } = await axios.post(apiURL, newProduct);
+        const allProducts = [products, ...product];
+        setProducts({ allProducts });
+    };
     const handleDecreamentButton = (product) => {
         const allProducts = [...products];
         const index = allProducts.indexOf(product);
@@ -34,7 +43,7 @@ const ProductsList = () => {
 
     return (
         <>
-            <button className="btn btn-success submit__button">Post</button>
+            <PostButton onPost={handlePostButton} />
             <div className="products">
                 {products.map((product) => (
                     <Product

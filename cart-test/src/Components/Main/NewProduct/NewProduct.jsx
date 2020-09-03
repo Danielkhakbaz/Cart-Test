@@ -1,9 +1,10 @@
 import React, { useState, useContext } from "react";
-import { CartContext } from "./../../../Providers/CartContext";
+import Input from "../../Common/Input/Input";
+import SubmitButton from "../../Common/SubmitButton/SubmitButton";
+import { CartContext } from "../../../Providers/CartContext";
 
 const NewProduct = (props) => {
     const [value, setValue] = useState("");
-
     const [products, setProducts] = useContext(CartContext);
 
     const handleAddProduct = () => {
@@ -26,16 +27,9 @@ const NewProduct = (props) => {
             <h1>Add New Product</h1>
             <div className="form-group">
                 <label htmlFor="input">Title</label>
-                <input
-                    id="input"
-                    type="text"
-                    className="form-control"
-                    onChange={(e) => handleChange(e.currentTarget.value)}
-                />
+                <Input id="input" type="text" onChange={handleChange} />
             </div>
-            <button className="btn btn-primary my-2" onClick={handleAddProduct}>
-                Submit
-            </button>
+            <SubmitButton inputValue={value} onAdd={handleAddProduct} />
         </>
     );
 };
