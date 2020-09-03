@@ -1,18 +1,9 @@
-import React, { useState, useEffect } from "react";
-import { apiURL } from "../../../Services/API/Config.json";
-import axios from "axios";
+import React, { useContext } from "react";
 import NewProductButton from "../NewProductButton/NewProductButton";
+import { CartContext } from "./../../../Providers/CartContext";
 
 const Products = () => {
-    useEffect(() => {
-        const fetchAPI = async () => {
-            const { data } = await axios.get(apiURL);
-            setProducts(data.products);
-        };
-        fetchAPI();
-    }, []);
-
-    const [products, setProducts] = useState([]);
+    const [products, setProducts] = useContext(CartContext);
 
     const handleDecreament = (product) => {
         if (product.count !== 0) {

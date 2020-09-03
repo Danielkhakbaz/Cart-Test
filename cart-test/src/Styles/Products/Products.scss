@@ -4,6 +4,15 @@
     grid-gap: 40px;
     justify-items: center;
     margin-bottom: 20px;
+    animation: animateMovieinfo 2s;
+}
+@keyframes animateMovieinfo {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
 }
 .products__list {
     width: 100%;
